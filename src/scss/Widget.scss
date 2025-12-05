@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     flex: 1;    
-    padding: 10px;
+    padding: 7px 10px;
     box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, .47);
     -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, .47);
     border-radius: 10px;
@@ -30,6 +30,10 @@
         border-bottom: 1px solid gray;
         cursor: pointer;
         width: max-content;
+
+        &:hover {
+            color: blue;
+        }
     }
 
     .percentage {

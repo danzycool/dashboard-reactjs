@@ -80,11 +80,10 @@ const Sidebar = () => {
             <LogoutIcon className="icon" />
             <span>Logout</span>
           </li>
-
-          {/* <p className="title">THEME</p> */}
         </ul>
       </div>
 
+      <p className="bottomTitle">THEME</p>
       <div className="bottom">
         <div className="colorOption"></div>
         <div className="colorOption"></div>
