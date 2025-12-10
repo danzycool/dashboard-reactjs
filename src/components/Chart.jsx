@@ -1,6 +1,5 @@
 import "../scss/Chart.scss";
 import {
-  ResponsiveContainer,
   Area,
   AreaChart,
   CartesianGrid,
@@ -18,16 +17,16 @@ const data = [
   { name: "June", Total: 1700 },
 ];
 
-const Chart = ({ isAnimationActive = true }) => {
+const Chart = ({ isAnimationActive = true, aspectRatio = 2 / 1, title }) => {
   return (
     <div className="chart">
-      <div className="title">Last 6 Months' Revenue</div>
+      <div className="title">{title}</div>
       <AreaChart
         style={{
           width: "100%",
           maxWidth: "700px",
           maxHeight: "50vh",
-          aspectRatio: 0.5,
+          aspectRatio,
         }}
         responsive
         data={data}

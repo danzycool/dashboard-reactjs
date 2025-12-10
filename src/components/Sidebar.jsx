@@ -1,4 +1,6 @@
 import "../scss/Sidebar.scss";
+import { Link } from "react-router-dom";
+
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@mui/icons-material/Person";
 import Inventory2Icon from "@mui/icons-material/Inventory2";
@@ -16,7 +18,9 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">Ultramall Admin</span>
+        <Link to="/" className="link">
+          <span className="logo">Ultramall Admin</span>
+        </Link>
       </div>
 
       <hr />
@@ -24,20 +28,28 @@ const Sidebar = () => {
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
-          <li>
-            <DashboardIcon className="icon" />
-            <span>Dashboard</span>
-          </li>
+          <Link to="/" className="link">
+            <li>
+              <DashboardIcon className="icon" />
+              <span>Dashboard</span>
+            </li>
+          </Link>
 
           <p className="title">LISTS</p>
-          <li>
-            <PersonIcon className="icon" />
-            <span>Users</span>
-          </li>
-          <li>
-            <Inventory2Icon className="icon" />
-            <span>Products</span>
-          </li>
+          <Link to="/users" className="link">
+            <li>
+              <PersonIcon className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+
+          <Link to="/products" className="link">
+            <li>
+              <Inventory2Icon className="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
+
           <li>
             <CreditCardIcon className="icon" />
             <span>Orders</span>

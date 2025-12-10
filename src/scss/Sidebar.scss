@@ -4,6 +4,10 @@
     background-color: white;
     border: 0.5px solid rgb(230, 227, 227);
 
+    .link {
+        text-decoration: none;
+    }
+
     .top {
         height: 50px;
         display: flex;
@@ -14,8 +18,10 @@
             font-size: 20px;
             font-weight: bold;
             color: #6439ff
+
         }
     }
+    
 
     hr {
         height: 0;
@@ -68,7 +74,7 @@
         font-size: 10px;
         font-weight: bold;
         color: #999;
-        margin-top: 13px;
+        margin-top: 12px;
         margin-left: 10px;
     }
 
@@ -76,7 +82,7 @@
         display: flex;
         align-items: center;
         margin: 10px;
-        margin-top: 1px;
+        margin-top: 3px;
 
 
         .colorOption {

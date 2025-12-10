@@ -2,6 +2,10 @@
     height: 600px;
     padding: 20px;
 
+    .link {
+        text-decoration: none;
+    }
+
     .cellWithImg {
         display: flex;
         align-items: center;
