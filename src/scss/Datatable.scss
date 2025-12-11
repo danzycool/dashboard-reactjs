@@ -2,8 +2,36 @@
     height: 600px;
     padding: 20px;
 
-    .link {
-        text-decoration: none;
+    .datatableTitle {
+        width: 100%;
+        font-size: 24px;
+        color: gray;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            text-transform: uppercase;
+        }
+
+        .link {
+            color: green;
+            font-size: smaller;
+            border: 1px solid green;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: ease-in-out 0.3s;
+
+            &:hover {
+                color: white;
+                background-color: green;
+                scale: 1.1;
+                padding: 5px 8px;
+                transition: ease-in-out 0.3s;
+            }
+        }
     }
 
     .cellWithImg {

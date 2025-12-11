@@ -1,4 +1,9 @@
+import "./scss/App.scss";
+import "./themes/dark.scss";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+
 import HomePage from "./pages/HomePage";
 import ListPage from "./pages/ListPage";
 import LoginPage from "./pages/LoginPage";
@@ -9,8 +14,34 @@ import NotFoundPage from "./pages/NotFoundPage";
 import { userInputs, productInputs } from "./lib/data";
 
 function App() {
+  const [darkTheme, setDarkTheme] = useState(false);
+
+  // Change Theme
+  const changeTheme = () => {
+    const theme = localStorage.getItem("DashboardTheme");
+
+    if (!theme) {
+      localStorage.setItem(JSON.stringify(true));
+      setDarkTheme(true);
+    } else {
+      setDarkTheme(!JSON.parse(theme));
+      localStorage.setItem("DashboardTheme", JSON.stringify(darkTheme));
+    }
+  };
+
+  // Check if a theme is stored in localStorage
+  const checkTheme = () => {
+    const theme = localStorage.getItem("DashboardTheme");
+
+    theme && setDarkTheme(JSON.parse(darkTheme));
+  };
+
+  useEffect(() => {
+    checkTheme;
+  }, []);
+
   return (
-    <>
+    <div className={darkTheme ? "app dark" : "app"}>
       <Router>
         <Routes>
           <Route path="/">
@@ -41,7 +72,7 @@ function App() {
           </Route>
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 

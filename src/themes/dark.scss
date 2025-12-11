@@ -1,0 +1,232 @@
+.app.dark {
+    background-color: #111;
+    color: whitesmoke;
+    // color: rgb(156, 156, 156);
+
+    .chartGrid {
+        stroke: rgba(228, 228, 228, 0.219);
+    }
+
+    .table {
+        background-color: #111;
+
+        .tableCell {
+            color: whitesmoke;
+            // color: gray;
+        }
+    }
+
+    
+    .navbar {
+        background-color: #111;
+        color: whitesmoke;
+        border-color: #333;
+        
+        .search {
+            border-color: gray; 
+        }
+        
+        input {
+            color: whitesmoke;
+            
+            &::placeholder {
+                color: lightgray;
+            }
+        }
+    }
+
+    .sidebar {
+        background-color: #111;
+        color: whitesmoke;
+        border-color: gray;
+
+        .icon {
+            color: whitesmoke;
+
+        }
+
+        .top {
+            .logo {
+                color: whitesmoke;
+            }
+        }
+
+        hr {
+            border-color: #333;
+        }
+
+        ul {
+            // .title {
+            //     color: whitesmoke;
+            // }
+
+            li {
+                &:hover {
+                    background-color: #333;
+
+                    .icon {
+                        color: goldenrod;
+                    }
+
+                    span {
+                        color: whitesmoke;
+                    }
+                }
+
+
+            }
+        }
+
+        .bottom {
+            .colorOption {
+                border-color: whitesmoke;
+            }
+        }
+
+    }
+
+    .widget {
+        .title {
+            color: #999;
+            // color: whitesmoke;
+        }
+
+        .link {
+            &:hover {
+                color: darkgray;
+            }
+        }
+    }
+
+    .datatable {
+
+        .datatableTitle {
+            span {
+                color: #999;
+            }
+
+            .link{
+                border-color: whitesmoke;
+                color: whitesmoke;
+            }
+        }
+
+        .datagrid {
+            background-color: #111;
+            color: whitesmoke;
+            border: none;
+
+
+            .viewButton {
+                background-color: gray;
+                color: whitesmoke;
+            }
+
+            .deleteButton {
+                background-color: crimson;
+                color: whitesmoke;
+            }
+
+            .cellWithStatus {
+                color: whitesmoke;
+            }
+
+            .active {
+                background-color: green;
+            }
+            
+            .passive {
+                background-color: crimson;
+            }
+            
+            .pending {
+                background-color: goldenrod;
+            }
+            
+        }
+    }
+
+    .css-j2rwcw-MuiDataGrid-root {
+        .MuiDataGrid-columnHeaderTitleContainer {
+            background-color: #111;
+        }
+        
+        .MuiDataGrid-columnHeaders .MuiDataGrid-filler {
+            background-color: #111;
+        }
+        
+        .MuiDataGrid-row {
+            &:hover {
+                color: #222;
+            }
+        }
+        
+        .MuiDataGrid-row--borderBottom {
+            .MuiDataGrid-columnHeader {
+                background-color: #111;
+            }
+        }  
+    } 
+
+    .css-11cfq65-MuiTablePagination-displayedRows, 
+    .css-h7cjts-MuiButtonBase-root-MuiIconButton-root,
+    input.PrivateSwitchBase-input.css-12xagqm-MuiSwitchBase-root    
+    {
+        color: whitesmoke;
+        border-color: whitesmoke;
+    }
+
+    input {
+        background-color: transparent;
+    }
+
+    .new  {
+        .newContainer {
+            .top {
+                h1 {
+                    color: #999;
+                }
+            }
+        }
+    }
+
+    .single {
+        .singleContainer {
+            .title {
+                color: #999;
+            }
+            
+            .top {
+                .left {
+                    .editButton {
+                        background-color: whitesmoke;
+                        color: #222;
+                    }
+
+                    .item {
+                        .details {
+                            .itemTitle {
+                                color: #999;
+                            }
+                            
+                            .detailItem {
+                                .itemKey {
+                                    color: #999;
+                                }
+                                .itemValue {
+                                    color: whitesmoke;
+                                }
+                            }
+                        }
+                    }
+                } 
+            } 
+        }
+
+    }
+
+    
+
+
+
+}

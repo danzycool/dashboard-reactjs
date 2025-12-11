@@ -65,13 +65,20 @@ const Datatable = () => {
 
   return (
     <div className="datatable">
+      <div className="datatableTitle">
+        <span>Add New user</span>
+        <Link to="/users/new" className="link">
+          Add New
+        </Link>
+      </div>
       <DataGrid
+        className="datagrid"
         rows={users}
         columns={userColumns.concat(actionColumn)}
         initialState={{
           pagination: {
             // Set the initial page size
-            paginationModel: { pageSize: 9, page: 0 },
+            paginationModel: { pageSize: 8, page: 0 },
           },
         }}
         pageSizeOptions={[5, 10, 25, { value: -1, label: "All" }]}
