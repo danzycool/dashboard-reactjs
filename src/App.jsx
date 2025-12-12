@@ -2,7 +2,7 @@ import "./scss/App.scss";
 import "./themes/dark.scss";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 
 import HomePage from "./pages/HomePage";
 import ListPage from "./pages/ListPage";
@@ -12,36 +12,13 @@ import SinglePage from "./pages/SinglePage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 import { userInputs, productInputs } from "./lib/data";
+import { DarkModeContext } from "./context/darkModeContext";
 
 function App() {
-  const [darkTheme, setDarkTheme] = useState(false);
-
-  // Change Theme
-  const changeTheme = () => {
-    const theme = localStorage.getItem("DashboardTheme");
-
-    if (!theme) {
-      localStorage.setItem(JSON.stringify(true));
-      setDarkTheme(true);
-    } else {
-      setDarkTheme(!JSON.parse(theme));
-      localStorage.setItem("DashboardTheme", JSON.stringify(darkTheme));
-    }
-  };
-
-  // Check if a theme is stored in localStorage
-  const checkTheme = () => {
-    const theme = localStorage.getItem("DashboardTheme");
-
-    theme && setDarkTheme(JSON.parse(darkTheme));
-  };
-
-  useEffect(() => {
-    checkTheme;
-  }, []);
+  const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className={darkTheme ? "app dark" : "app"}>
+    <div className={darkMode ? "app dark" : "app"}>
       <Router>
         <Routes>
           <Route path="/">

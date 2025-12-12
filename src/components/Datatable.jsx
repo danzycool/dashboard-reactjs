@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import { DataGrid } from "@mui/x-data-grid";
 import { users } from "../lib/data";
+import { useState } from "react";
 
 const userColumns = [
   { field: "id", headerName: "ID", width: 70 },
@@ -42,20 +43,31 @@ const userColumns = [
 ];
 
 const Datatable = () => {
+  const [data, setData] = useState(users);
+
+  const handleDelete = (id) => {
+    setData(data.filter((item) => item.id !== id));
+  };
+
   const actionColumn = [
     {
       field: "action",
       headerName: "Action",
       width: 200,
-      renderCell: () => {
+      renderCell: (params) => {
         return (
           <div className="cellAction">
             <Link to="/users/single" className="link">
               <button className="viewButton">View</button>
             </Link>
 
-            <Link to="/" className="link">
-              <button className="deleteButton">Delete</button>
+            <Link className="link">
+              <button
+                className="deleteButton"
+                onClick={() => handleDelete(params.row.id)}
+              >
+                Delete
+              </button>
             </Link>
           </div>
         );
@@ -73,7 +85,7 @@ const Datatable = () => {
       </div>
       <DataGrid
         className="datagrid"
-        rows={users}
+        rows={data}
         columns={userColumns.concat(actionColumn)}
         initialState={{
           pagination: {
